@@ -9,18 +9,18 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
-
     ./font.nix
-    ./alacritty.nix
-    ./zathura.nix
-    ./nitrogen.nix
-    ./brave.nix
-    ./rofi.nix
     ./theme.nix
     ./dev.nix
     ./shell.nix
-    ./starship.nix
-    ./emacs.nix
+
+    ./apps/alacritty.nix
+    ./apps/zathura.nix
+    ./apps/nitrogen.nix
+    ./apps/brave.nix
+    ./apps/rofi.nix
+    ./apps/starship.nix
+    ./apps/emacs.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.nord;
