@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 emacs --daemon &
 nitrogen --restore &

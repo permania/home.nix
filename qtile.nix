@@ -1,4 +1,8 @@
-{ config, pkgs, ...  }: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   xdg.configFile."qtile/config.py" = {
     enable = true;
 
@@ -23,6 +27,7 @@
 
   xdg.configFile."qtile/autostart" = {
     enable = true;
+    executable = true;
     source = ./assets/qtile/autostart;
   };
 }
