@@ -13,6 +13,7 @@
     ./theme.nix
     ./dev.nix
     ./shell.nix
+    ./qtile.nix
 
     ./apps/alacritty.nix
     ./apps/zathura.nix
