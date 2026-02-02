@@ -5,6 +5,7 @@
 }: {
   xdg.configFile."qtile/config.py" = {
     enable = true;
+    executable = true;
 
     source = pkgs.replaceVars ./assets/qtile/qtile.py {
       darkbg = config.colorScheme.palette.base00;

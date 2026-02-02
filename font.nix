@@ -11,7 +11,7 @@
     enable = true;
     defaultFonts = let
     in {
-      monospace = ["Jetbrains Mono"];
+      monospace = ["Maple Mono CN"];
       serif = ["Times New Roman"];
       sansSerif = ["Trebuchet MS"];
     };
