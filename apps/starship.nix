@@ -11,19 +11,21 @@
       palette = "nix";
 
       format = lib.concatStrings [
-        "$username"
-        "[ :: ](bg:lightbg)"
         "$directory"
+        "$nix_shell"
         "$character"
       ];
 
       add_newline = false;
 
-      right_format = lib.concatStrings ["$nix_shell" "$git_commit"];
+      right_format = lib.concatStrings [
+        "$git_commit"
+        " "
+      ];
 
       username = {
         format = "[ $user ]($style)";
-        style_user = "yellow bg:darkbg";
+        style_user = "yellow";
         show_always = true;
       };
 
@@ -43,22 +45,22 @@
       };
 
       character = {
-        success_symbol = "";
-        error_symbol = "";
+        success_symbol = "λ";
+        error_symbol = "λ";
       };
 
       directory = {
         truncation_length = 2;
         truncation_symbol = "";
-        format = "[$read_only]($read_only_style)[ $path ]($style)";
-        style = "yellow bg:darkbg";
-        read_only = " READONLY:";
-        read_only_style = "red bg:darkbg";
+        format = "[$read_only]($read_only_style)[$path ]($style)";
+        style = "yellow";
+        read_only = "RO:";
+        read_only_style = "red";
       };
 
       git_branch = {
         always_show_remote = true;
-        format = " $remote_name:$branch ";
+        format = " $remote_name:$branch";
         style = "bold purple";
         symbol = "";
         disabled = false;
@@ -72,7 +74,10 @@
         disabled = false;
       };
 
-      nix_shell = {symbol = " ";};
+      nix_shell = {
+        symbol = "+nix ";
+        format = "[$symbol](blue)";
+      };
 
       palettes.nix = {
         background = "#${config.colorScheme.palette.base01}";

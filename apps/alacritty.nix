@@ -5,7 +5,7 @@
       window = {
         opacity = 1.0;
         padding = {
-          x = 0;
+          x = 8;
           y = 8;
         };
       };
