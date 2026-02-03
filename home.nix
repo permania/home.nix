@@ -12,6 +12,7 @@
     ./font.nix
     ./theme.nix
     ./dev.nix
+    ./lsp.nix
     ./shell.nix
     ./qtile.nix
 
