@@ -22,6 +22,7 @@
     ./apps/rofi.nix
     ./apps/starship.nix
     ./apps/emacs.nix
+    ./apps/gpg.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-hard;
