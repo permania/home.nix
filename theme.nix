@@ -2,12 +2,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "gruvbox-dark";
-      package = pkgs.gruvbox-dark-gtk;
+      name = "Arc-Dark";
+      package = pkgs.arc-theme;
     };
     iconTheme = {
-      name = "gruvbox-dark";
-      package = pkgs.gruvbox-dark-icons-gtk;
+      name = "Nordzy";
+      package = pkgs.nordzy-icon-theme;
     };
   };
 

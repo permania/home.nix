@@ -1,6 +1,4 @@
 {
-  pkgs,
-  config,
   inputs,
   ...
 }: {
@@ -26,7 +24,7 @@
     ./apps/gpg.nix
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-hard;
+  colorScheme = inputs.nix-colors.colorSchemes.nord;
 
   home = {
     username = "corn";
