@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     corefonts
     maple-mono.CN
+    iosevka
     noto-fonts
     texlivePackages.opensans
     texlivePackages.jetbrainsmono-otf
@@ -11,7 +12,7 @@
     enable = true;
     defaultFonts = let
     in {
-      monospace = ["Maple Mono CN"];
+      monospace = ["Iosevka"];
       serif = ["Times New Roman"];
       sansSerif = ["Trebuchet MS"];
     };
