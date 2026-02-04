@@ -19,8 +19,8 @@
       add_newline = false;
 
       right_format = lib.concatStrings [
-                                "$directory"
-                                "$git_commit"
+        "$directory"
+        "$git_commit"
       ];
 
       username = {
