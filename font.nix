@@ -3,6 +3,7 @@
     corefonts
     maple-mono.CN
     iosevka
+    nerd-fonts.mononoki
     noto-fonts
     texlivePackages.opensans
     texlivePackages.jetbrainsmono-otf
@@ -12,7 +13,7 @@
     enable = true;
     defaultFonts = let
     in {
-      monospace = ["Iosevka"];
+      monospace = ["Mononoki Nerd Font Mono"];
       serif = ["Times New Roman"];
       sansSerif = ["Trebuchet MS"];
     };
