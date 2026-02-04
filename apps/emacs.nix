@@ -19,7 +19,7 @@
         owner = "permania";
         repo = "emacs";
         rev = "main";
-        sha256 = "sha256-Ng8raXSO5uMs+CHU/3S8mAlEjYgV9yFPFdGBnSw56ek=";
+        sha256 = "sha256-f3oQCyBJ9GCHzLNiFlVrN9LnBCYnlI7ciOoxeoD7awA=";
       };
       buildInputs = [pkgs.emacs];
       buildPhase = ''
