@@ -1,12 +1,10 @@
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   targets.genericLinux.enable = false; # true on non-nixos
   programs.home-manager.enable = true;
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
+    inputs.nvf.homeManagerModules.default
     ./font.nix
     ./theme.nix
     ./dev.nix
@@ -22,6 +20,9 @@
     ./apps/starship.nix
     ./apps/emacs.nix
     ./apps/gpg.nix
+    ./apps/gnupass.nix
+
+    ./apps/nvim/nvim.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.nord;
