@@ -8,11 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
+    nvf.url = "github:notashelf/nvf";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    nvf,
     ...
   } @ inputs: let
     system = "x86_64-linux";

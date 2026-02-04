@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [ispell];
+
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
@@ -17,7 +19,7 @@
         owner = "permania";
         repo = "emacs";
         rev = "main";
-        sha256 = "sha256-UBgRA+OgitC7NiQgFQ0QsJ4oUYDXoZG1+w6jPP+1Euw=";
+        sha256 = "sha256-Ng8raXSO5uMs+CHU/3S8mAlEjYgV9yFPFdGBnSw56ek=";
       };
       buildInputs = [pkgs.emacs];
       buildPhase = ''
@@ -34,13 +36,48 @@
     recursive = false;
   };
 
-  programs.ripgrep.enable = true;
   programs.texlive = {
     enable = true;
     extraPackages = tpkgs: {
       inherit (tpkgs) scheme-medium latexmk xetex wrapfig capt-of;
       #amsmath
       #collection-fontsrecommended
+    };
+  };
+
+  programs.mbsync.enable = true;
+  programs.msmtp.enable = true;
+  programs.notmuch = {
+    enable = true;
+    hooks = {
+      preNew = "mbsync -a";
+    };
+  };
+  accounts.email = {
+    accounts."school" = {
+      address = "26c.william@ptschools.org";
+      imap.host = "imap.gmail.com";
+      mbsync = {
+        enable = true;
+        create = "maildir";
+      };
+      msmtp.enable = true;
+      notmuch.enable = true;
+      primary = true;
+      realName = "Connor Mika";
+      signature = {
+        text = ''
+          Mit besten Wünschen
+          Ben Bals
+          https://keybase.io/beb
+        '';
+        showSignature = "append";
+      };
+      passwordCommand = "pass show api/gmail/school";
+      smtp = {
+        host = "smtp.gmail.com";
+      };
+      userName = "26c.william@ptschools.org";
     };
   };
 }
