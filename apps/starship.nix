@@ -11,7 +11,7 @@
       palette = "nix";
 
       format = lib.concatStrings [
-        "$directory"
+        "$hostname"
         "$nix_shell"
         "$character"
       ];
@@ -19,8 +19,8 @@
       add_newline = false;
 
       right_format = lib.concatStrings [
-        "$git_commit"
-        " "
+                                "$directory"
+                                "$git_commit"
       ];
 
       username = {
@@ -52,7 +52,7 @@
       directory = {
         truncation_length = 2;
         truncation_symbol = "";
-        format = "[$read_only]($read_only_style)[$path ]($style)";
+        format = "[$read_only]($read_only_style)[$path]($style)";
         style = "yellow";
         read_only = "RO:";
         read_only_style = "red";
@@ -68,7 +68,7 @@
 
       git_commit = {
         commit_hash_length = 7;
-        format = "[$hash]($style)";
+        format = "[ $hash]($style)";
         style = "purple";
         only_detached = false;
         disabled = false;
