@@ -11,7 +11,7 @@
       palette = "nix";
 
       format = lib.concatStrings [
-        "$hostname"
+        "$directory" " "
         "$nix_shell"
         "$character"
       ];
@@ -19,7 +19,6 @@
       add_newline = false;
 
       right_format = lib.concatStrings [
-        "$directory"
         "$git_commit"
       ];
 
@@ -45,8 +44,8 @@
       };
 
       character = {
-        success_symbol = "λ";
-        error_symbol = "λ";
+        success_symbol = "[λ](bold green)";
+        error_symbol = "[λ](bold red)";
       };
 
       directory = {
