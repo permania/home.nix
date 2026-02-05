@@ -19,9 +19,9 @@
         owner = "permania";
         repo = "emacs";
         rev = "main";
-        sha256 = "sha256-NxbNDdHa85Bv0ZBIjh78NB1XCnbjMPYZT9TTzgmAcEU=";
+        sha256 = "sha256-m7gYRN/x+Vg0WB1zF3M3HFeEl3FE0YEARL20juMqQi8=";
       };
-      buildInputs = [pkgs.emacs];
+      buildInputs = [ pkgs.emacs-gtk ];
       buildPhase = ''
         emacs --batch --eval "(require 'org)" \
         --eval "(org-babel-tangle-file \"init.org\")"
@@ -39,7 +39,7 @@
   programs.texlive = {
     enable = true;
     extraPackages = tpkgs: {
-      inherit (tpkgs) scheme-medium latexmk xetex wrapfig capt-of;
+      inherit (tpkgs) scheme-medium latexmk xetex wrapfig capt-of siunitx;
       #amsmath
       #collection-fontsrecommended
     };
