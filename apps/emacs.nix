@@ -65,14 +65,10 @@
       notmuch.enable = true;
       primary = true;
       realName = "Connor Mika";
-      signature = {
-        text = ''
-          Mit besten Wünschen
-          Ben Bals
-          https://keybase.io/beb
-        '';
-        showSignature = "append";
-      };
+      # signature = {
+      #   text = '''';
+      #   showSignature = "append";
+      # };
       passwordCommand = "pass show api/gmail/school";
       smtp = {
         host = "smtp.gmail.com";
