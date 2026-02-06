@@ -1,9 +1,8 @@
-{ ... }:
-{
+{...}: {
   programs = {
     fish = {
       enable = true;
-      shellAliases = { };
+      shellAliases = {};
       functions = {
         "fish_greeting".body = "";
         "ls".body = "eza --long --group-directories-last --all --icons --no-time $argv";

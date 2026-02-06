@@ -21,7 +21,7 @@
         rev = "main";
         sha256 = "sha256-m7gYRN/x+Vg0WB1zF3M3HFeEl3FE0YEARL20juMqQi8=";
       };
-      buildInputs = [ pkgs.emacs ];
+      buildInputs = [pkgs.emacs];
       buildPhase = ''
         emacs --batch --eval "(require 'org)" \
         --eval "(org-babel-tangle-file \"init.org\")"

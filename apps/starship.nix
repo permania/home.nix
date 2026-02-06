@@ -11,7 +11,8 @@
       palette = "nix";
 
       format = lib.concatStrings [
-        "$directory" " "
+        "$directory"
+        " "
         "$nix_shell"
         "$character"
       ];

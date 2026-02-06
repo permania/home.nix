@@ -11,6 +11,7 @@
     ./lsp.nix
     ./shell.nix
     ./qtile.nix
+    ./picom.nix
 
     ./apps/alacritty.nix
     ./apps/zathura.nix
