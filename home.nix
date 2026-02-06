@@ -3,9 +3,8 @@
   programs.home-manager.enable = true;
 
   imports = [
-    inputs.nix-colors.homeManagerModules.default
     inputs.nvf.homeManagerModules.default
-    ./font.nix
+    inputs.stylix.homeModules.stylix
     ./theme.nix
     ./dev.nix
     ./lsp.nix
@@ -20,13 +19,13 @@
     ./apps/rofi.nix
     ./apps/starship.nix
     ./apps/emacs.nix
+    ./apps/btop.nix
+    ./apps/bat.nix
     ./apps/gpg.nix
     ./apps/gnupass.nix
 
-    ./apps/nvim/nvim.nix
+    # ./apps/nvim/nvim.nix
   ];
-
-  colorScheme = inputs.nix-colors.colorSchemes.nord;
 
   home = {
     username = "corn";

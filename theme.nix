@@ -1,27 +1,33 @@
-{pkgs, ...}: {
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Arc-Dark";
-      package = pkgs.arc-theme;
-    };
-    iconTheme = {
-      name = "Nordzy";
-      package = pkgs.nordzy-icon-theme;
-    };
-  };
+{ pkgs, ... }:
+{
+  fonts.fontconfig.enable = true;
 
-  home.pointerCursor = {
+  stylix = {
     enable = true;
-    gtk.enable = true;
-    x11.enable = true;
-    name = "Posy_Cursor";
-    size = 24;
-    package = pkgs.posy-cursors;
-  };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    fonts = {
+      serif = {
+        package = pkgs.corefonts;
+        name = "Times New Roman";
+      };
+      sansSerif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
+      };
+      monospace = {
+        package = pkgs.nerd-fonts.mononoki;
+        name = "Mononoki Nerd Font Mono";
+      };
+      emoji = {
+        package = pkgs.noto-fonts-color-emoji;
+        name = "Noto Color Emoji";
+      };
+    };
 
-  home.sessionVariables = {
-    XCURSOR_THEME = "Posy_Cursor";
-    XCURSOR_SIZE = 24;
+    cursor = {
+      name = "Posy_Cursor";
+      size = 24;
+      package = pkgs.posy-cursors;
+    };
   };
 }

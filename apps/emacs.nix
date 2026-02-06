@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  stylix.targets.emacs.enable = false;
+
   home.packages = with pkgs; [ispell];
 
   programs.emacs = {
@@ -19,7 +21,7 @@
         owner = "permania";
         repo = "emacs";
         rev = "main";
-        sha256 = "sha256-t4mjma+7DcLKSvGg0vVmzmsxhA0wG6Kxomuj4IirD/c=";
+        sha256 = "sha256-MPAPyNk77dG1v1Azh1u2qPjIgFbw15S1dSw/6jpKGo0=";
       };
       buildInputs = [pkgs.emacs];
       buildPhase = ''

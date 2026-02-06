@@ -8,8 +8,6 @@
     enableBashIntegration = true;
     enableFishIntegration = true;
     settings = {
-      palette = "nix";
-
       format = lib.concatStrings [
         "$directory"
         " "
@@ -45,7 +43,7 @@
       };
 
       character = {
-        success_symbol = "[λ](bold green)";
+        success_symbol = "[λ](bold blue)";
         error_symbol = "[λ](bold red)";
       };
 
@@ -80,20 +78,20 @@
       };
 
       palettes.nix = {
-        background = "#${config.colorScheme.palette.base01}";
-        darkbg = "#${config.colorScheme.palette.base00}";
-        lightbg = "#${config.colorScheme.palette.base02}";
-        foreground = "#${config.colorScheme.palette.base05}";
-        lightfg = "#${config.colorScheme.palette.base06}";
-        darkfg = "#${config.colorScheme.palette.base04}";
-        black = "#${config.colorScheme.palette.base03}";
-        red = "#${config.colorScheme.palette.base0E}";
-        green = "#${config.colorScheme.palette.base0D}";
-        yellow = "#${config.colorScheme.palette.base0A}";
-        blue = "#${config.colorScheme.palette.base08}";
-        magenta = "#${config.colorScheme.palette.base09}";
-        cyan = "#${config.colorScheme.palette.base0B}";
-        white = "#${config.colorScheme.palette.base0F}";
+        background = "#${config.lib.stylix.colors.base01}";
+        darkbg = "#${config.lib.stylix.colors.base00}";
+        lightbg = "#${config.lib.stylix.colors.base02}";
+        foreground = "#${config.lib.stylix.colors.base05}";
+        lightfg = "#${config.lib.stylix.colors.base06}";
+        darkfg = "#${config.lib.stylix.colors.base04}";
+        black = "#${config.lib.stylix.colors.base03}";
+        red = "#${config.lib.stylix.colors.base0E}";
+        green = "#${config.lib.stylix.colors.base0D}";
+        yellow = "#${config.lib.stylix.colors.base0A}";
+        blue = "#${config.lib.stylix.colors.base08}";
+        magenta = "#${config.lib.stylix.colors.base09}";
+        cyan = "#${config.lib.stylix.colors.base0B}";
+        white = "#${config.lib.stylix.colors.base0F}";
       };
     };
   };
