@@ -179,6 +179,44 @@ screens = [
         ),
         background="#666666",
     ),
+    Screen(
+        top=bar.Bar(
+            [
+                widget.GroupBox(
+                    font="monospace",
+                    highlight_method='block',
+                    active='#@yellow@',
+                    inactive='#@darkfg@',
+                    this_current_screen_border='#@lightbg@',
+                ),
+                widget.WindowName(foreground="#@foreground@"),
+                widget.Chord(
+                    name_transform=lambda name: name.upper(),
+                    fmt="<b><i>{}</i></b>",
+                    foreground="#@foreground@"
+                ),
+                widget.Systray(foreground="#@foreground@"),
+                widget.CurrentLayout(foreground="#@foreground@"),
+                widget.Volume(fmt="SND {}", foreground="#@foreground@"),
+                widget.Battery(
+                    fmt="INBAT {}",
+                    battery="BAT0", # Internal
+                    foreground="#@foreground@"
+                ),
+                widget.Battery(
+                    fmt="EXBAT {}",
+                    battery="BAT1", # External
+                    foreground="#@foreground@"
+                ),
+                widget.Clock(format="%a %m/%d @ %H:%M", foreground="#@foreground@"),
+            ],
+            24,
+            background="#@darkbg@",
+            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+        ),
+        background="#666666",
+    ),
 ]
 
 # Drag floating layouts.
