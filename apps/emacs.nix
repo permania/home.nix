@@ -39,7 +39,15 @@
   programs.texlive = {
     enable = true;
     extraPackages = tpkgs: {
-      inherit (tpkgs) scheme-medium latexmk xetex wrapfig capt-of siunitx;
+      inherit
+        (tpkgs)
+        scheme-medium
+        latexmk
+        xetex
+        wrapfig
+        capt-of
+        siunitx
+        ;
       #amsmath
       #collection-fontsrecommended
     };
@@ -51,6 +59,11 @@
     enable = true;
     hooks = {
       preNew = "mbsync -a";
+      postNew = ''
+        notmuch tag +sent from:"26c.william@ptschools.org"
+        notmuch tag +drafts folder:"Maildir/school/[Gmail]/Drafts"
+        notmuch tag +trash folder:"Maildir/school/[Gmail]/Trash"
+      '';
     };
   };
   accounts.email = {
