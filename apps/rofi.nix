@@ -44,7 +44,6 @@
         padding = 1;
       };
 
-
       "#scrollbar" = {
         width = 2;
         border = 0;

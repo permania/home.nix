@@ -33,8 +33,7 @@
     source = ./assets/qtile/autostart;
   };
 
-  home.activation.clearQtileCache =
-  lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.clearQtileCache = lib.hm.dag.entryAfter ["writeBoundary"] ''
     rm -rf ~/.config/qtile/__pycache__
   '';
 }
