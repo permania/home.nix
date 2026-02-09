@@ -14,8 +14,8 @@
         name = "DejaVu Sans";
       };
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font Mono";
+        package = pkgs.victor-mono;
+        name = "Victor Mono";
       };
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
