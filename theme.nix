@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  fetchurl,
+  ...
+}: {
   fonts.fontconfig.enable = true;
 
   stylix = {
@@ -24,7 +28,7 @@
     };
 
     cursor = {
-      name = "Posy_Cursor";
+      name = "Posy_Cursor_Mono_Black";
       size = 24;
       package = pkgs.posy-cursors;
     };
