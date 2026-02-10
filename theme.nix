@@ -2,12 +2,13 @@
   pkgs,
   fetchurl,
   ...
-}: {
+}:
+{
   fonts.fontconfig.enable = true;
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest-dark-hard.yaml";
     fonts = {
       serif = {
         package = pkgs.corefonts;
@@ -18,8 +19,8 @@
         name = "DejaVu Sans";
       };
       monospace = {
-        package = pkgs.victor-mono;
-        name = "Victor Mono";
+        package = pkgs.maple-mono.CN;
+        name = "Maple Mono";
       };
       emoji = {
         package = pkgs.noto-fonts-color-emoji;

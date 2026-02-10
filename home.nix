@@ -21,6 +21,7 @@
     ./apps/emacs.nix
     ./apps/btop.nix
     ./apps/bat.nix
+    ./apps/beets.nix
     ./apps/gpg.nix
     ./apps/gnupass.nix
 
