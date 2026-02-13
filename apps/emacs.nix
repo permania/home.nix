@@ -2,7 +2,7 @@
 {
   stylix.targets.emacs.enable = false;
 
-  home.packages = with pkgs; [ ispell ];
+  home.packages = with pkgs; [ ispell biber ];
 
   programs.emacs = {
     enable = true;
@@ -28,7 +28,7 @@
           owner = "permania";
           repo = "emacs";
           rev = "main";
-          sha256 = "sha256-MAw6X/loLSpAlToVdecUP4zTV745qoH0BwYqUHSEs3c=";
+          sha256 = "sha256-xbCVFaca9XSRuq+X5x2ibKnResD/Z6iWmTg1pSmcV/s=";
         };
         buildInputs = [ pkgs.emacs ];
         buildPhase = ''
@@ -56,6 +56,11 @@
         wrapfig
         capt-of
         siunitx
+        censor
+        tokcycle
+        pbox
+        biblatex
+        biblatex-mla
         ;
       #amsmath
       #collection-fontsrecommended
