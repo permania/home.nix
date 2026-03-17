@@ -57,6 +57,7 @@
         capt-of
         siunitx
         censor
+        gensymb
         tokcycle
         pbox
         biblatex

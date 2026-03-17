@@ -15,7 +15,7 @@
     ./apps/alacritty.nix
     ./apps/zathura.nix
     ./apps/nitrogen.nix
-    ./apps/brave.nix
+    ./apps/chromium.nix
     ./apps/rofi.nix
     ./apps/starship.nix
     ./apps/emacs.nix
