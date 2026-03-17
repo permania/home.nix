@@ -34,7 +34,7 @@ from libqtile.config import EzKey as EKey
 from libqtile.lazy import lazy
 
 mod = "mod4"
-browser = "brave"
+browser = "chromium"
 terminal = "alacritty"
 editor = "emacsclient -c -a emacs"
 runner = "rofi -show drun"
