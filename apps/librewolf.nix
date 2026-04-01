@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.librewolf = {
     enable = true;
     profiles = {
@@ -154,5 +153,5 @@
       };
     };
   };
-  stylix.targets.librewolf.profileNames = [ "corn" ];
+  stylix.targets.librewolf.profileNames = ["corn"];
 }

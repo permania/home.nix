@@ -1,7 +1,13 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   programs.alacritty = {
     enable = true;
     settings = {
+      font.size = lib.mkForce 9.0;
+
       window = {
         opacity = 1.0;
         padding = {

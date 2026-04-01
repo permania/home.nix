@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   stylix.targets.emacs.enable = false;
 
-  home.packages = with pkgs; [ ispell biber ];
+  home.packages = with pkgs; [ispell biber];
 
   programs.emacs = {
     enable = true;
@@ -15,41 +14,40 @@
     client.enable = true;
   };
 
- home.file.".local/share/emacs/themes" = {
-   source = ../assets/emacs;
-   recursive = true;
- };
+  home.file.".local/share/emacs/themes" = {
+    source = ../assets/emacs;
+    recursive = true;
+  };
 
-  home.file.".emacs.d" =
-    let
-      myEmacsConfig = pkgs.stdenv.mkDerivation {
-        name = "emacs-config";
-        src = pkgs.fetchFromGitHub {
-          owner = "permania";
-          repo = "emacs";
-          rev = "main";
-          sha256 = "sha256-xbCVFaca9XSRuq+X5x2ibKnResD/Z6iWmTg1pSmcV/s=";
-        };
-        buildInputs = [ pkgs.emacs ];
-        buildPhase = ''
-          emacs --batch --eval "(require 'org)" \
-          --eval "(org-babel-tangle-file \"init.org\")"
-        '';
-        installPhase = ''
-          mkdir -p $out
-          cp -r * $out/ 2>/dev/null
-        '';
+  home.file.".emacs.d" = let
+    myEmacsConfig = pkgs.stdenv.mkDerivation {
+      name = "emacs-config";
+      src = pkgs.fetchFromGitHub {
+        owner = "permania";
+        repo = "emacs";
+        rev = "main";
+        sha256 = "sha256-xbCVFaca9XSRuq+X5x2ibKnResD/Z6iWmTg1pSmcV/s=";
       };
-    in
-    {
-      source = myEmacsConfig;
-      recursive = false;
+      buildInputs = [pkgs.emacs];
+      buildPhase = ''
+        emacs --batch --eval "(require 'org)" \
+        --eval "(org-babel-tangle-file \"init.org\")"
+      '';
+      installPhase = ''
+        mkdir -p $out
+        cp -r * $out/ 2>/dev/null
+      '';
     };
+  in {
+    source = myEmacsConfig;
+    recursive = false;
+  };
 
   programs.texlive = {
     enable = true;
     extraPackages = tpkgs: {
-      inherit (tpkgs)
+      inherit
+        (tpkgs)
         scheme-medium
         latexmk
         xetex

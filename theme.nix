@@ -1,10 +1,11 @@
 {
+  config,
   pkgs,
-  fetchurl,
   ...
-}:
-{
+}: {
   fonts.fontconfig.enable = true;
+
+  gtk.gtk4.theme = config.gtk.theme;
 
   stylix = {
     enable = true;

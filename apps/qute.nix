@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.qutebrowser = {
     enable = true;
     searchEngines = {
@@ -15,5 +14,4 @@
       colors.webpage.darkmode.enabled = true;
     };
   };
-
 }
