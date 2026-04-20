@@ -10,6 +10,7 @@
     ./lsp.nix
     ./shell.nix
     ./qtile.nix
+    ./xsession.nix
     ./picom.nix
 
     ./apps/alacritty.nix
@@ -17,6 +18,7 @@
     ./apps/nitrogen.nix
     ./apps/chromium.nix
     ./apps/rofi.nix
+    ./apps/dunst.nix
     ./apps/starship.nix
     ./apps/emacs.nix
     ./apps/btop.nix
@@ -24,6 +26,7 @@
     ./apps/beets.nix
     ./apps/gpg.nix
     ./apps/gnupass.nix
+    ./apps/freecad.nix
 
     # ./apps/nvim/nvim.nix
   ];

@@ -11,8 +11,8 @@
       window = {
         opacity = 1.0;
         padding = {
-          x = 8;
-          y = 8;
+          x = 12;
+          y = 12;
         };
       };
       terminal.shell.program = "fish";
