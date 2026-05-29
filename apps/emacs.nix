@@ -60,6 +60,7 @@
         pbox
         biblatex
         biblatex-mla
+        chemfig
         ;
       #amsmath
       #collection-fontsrecommended

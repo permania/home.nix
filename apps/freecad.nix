@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [freecad];
+  home.packages = with pkgs; [ freecad ]; 
 }

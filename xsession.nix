@@ -6,7 +6,8 @@
 
   xsession = {
     enable = true;
-    windowManager.command = "qtile start -c ~/.config/qtile/config.py";
+    # windowManager.command = "qtile start -c ~/.config/qtile/config.py";
+    windowManager.command = "/home/corn/documents/git/kip/target/debug/kipwm";
     initExtra = "systemctl --user start graphical-session.target";
   };
 }
