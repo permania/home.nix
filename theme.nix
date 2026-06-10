@@ -20,8 +20,8 @@
         name = "DejaVu Sans";
       };
       monospace = {
-        package = pkgs.maple-mono.CN;
-        name = "Maple Mono";
+        package = pkgs.nerd-fonts.mononoki;
+        name = "Mononoki Nerd Font";
       };
       emoji = {
         package = pkgs.noto-fonts-color-emoji;

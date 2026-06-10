@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    cozette
     corefonts
     maple-mono.CN
     iosevka
@@ -12,11 +13,11 @@
 
   fonts.fontconfig = {
     enable = true;
-    defaultFonts = let
-    in {
-      monospace = ["Mononoki Nerd Font Mono"];
-      serif = ["Times New Roman"];
-      sansSerif = ["Trebuchet MS"];
-    };
+    defaultFonts =
+      {
+        monospace = ["Cozette"];
+        serif = ["Times New Roman"];
+        sansSerif = ["Trebuchet MS"];
+      };
   };
 }
