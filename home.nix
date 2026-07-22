@@ -26,7 +26,7 @@
     ./apps/beets.nix
     ./apps/gpg.nix
     ./apps/gnupass.nix
-    ./apps/freecad.nix
+    # ./apps/freecad.nix
 
     # ./apps/nvim/nvim.nix
   ];
