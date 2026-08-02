@@ -1,8 +1,27 @@
-{
-  pkgs,
-  ...
-}:
-{
+{pkgs, ...}: let
+  berkeley-mono = pkgs.stdenv.mkDerivation {
+    pname = "berkeley-mono";
+    version = "1.0";
+
+    src = ./assets/berkeley-mono.zip;
+
+    nativeBuildInputs = [pkgs.unzip];
+
+    unpackPhase = ''
+      unzip $src -d source
+    '';
+
+    installPhase = ''
+      mkdir -p $out/share/fonts/opentype
+      cp -r source/berkeley-mono/*.otf $out/share/fonts/opentype/
+    '';
+
+    meta = {
+      description = "";
+      platforms = pkgs.lib.platforms.all;
+    };
+  };
+in {
   fonts.fontconfig.enable = true;
 
   home.pointerCursor.enable = true;
@@ -21,8 +40,8 @@
         name = "DejaVu Sans";
       };
       monospace = {
-        package = pkgs.nerd-fonts.mononoki;
-        name = "Mononoki Nerd Font";
+        package = berkeley-mono;
+        name = "Berkeley Mono";
       };
       emoji = {
         package = pkgs.noto-fonts-color-emoji;

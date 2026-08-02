@@ -13,11 +13,10 @@
 
   fonts.fontconfig = {
     enable = true;
-    defaultFonts =
-      {
-        monospace = ["Cozette"];
-        serif = ["Times New Roman"];
-        sansSerif = ["Trebuchet MS"];
-      };
+    defaultFonts = {
+      monospace = ["Maple Mono"];
+      serif = ["Times New Roman"];
+      sansSerif = ["Trebuchet MS"];
+    };
   };
 }
