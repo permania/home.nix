@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
     settings = {
@@ -14,4 +14,6 @@
       relativenumber = true;
     };
   };
+
+  home.packages = with pkgs; [ripgrep];
 }
