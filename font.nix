@@ -5,7 +5,6 @@
     maple-mono.CN
     iosevka
     nerd-fonts.mononoki
-    noto-fonts
     sitelen-seli-kiwen
     texlivePackages.opensans
     texlivePackages.jetbrainsmono-otf

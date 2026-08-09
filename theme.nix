@@ -44,8 +44,8 @@ in {
         name = "Berkeley Mono";
       };
       emoji = {
-        package = pkgs.noto-fonts-color-emoji;
-        name = "Noto Color Emoji";
+        package = pkgs.twemoji-color-font;
+        name = "Twitter Color Emoji";
       };
     };
 
