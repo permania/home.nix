@@ -5,9 +5,10 @@
 }: {
   programs.rofi = {
     enable = true;
+    settings = {
     cycle = true;
     modes = ["drun"];
-    extraConfig = {
+
       display-drun = "run";
       drun-display-format = "{name}";
       drun-match-fields = "name,exec";

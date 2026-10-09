@@ -3,7 +3,6 @@
   programs.home-manager.enable = true;
 
   imports = [
-    inputs.nvf.homeManagerModules.default
     inputs.stylix.homeModules.stylix
     ./theme.nix
     ./dev.nix
@@ -15,7 +14,7 @@
 
     ./apps/alacritty.nix
     ./apps/zathura.nix
-    ./apps/nitrogen.nix
+    ./apps/feh.nix
     ./apps/chromium.nix
     ./apps/rofi.nix
     ./apps/dunst.nix

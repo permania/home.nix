@@ -7,7 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "github:notashelf/nvf";
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +16,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    nvf,
     ...
   } @ inputs: let
     system = "x86_64-linux";
